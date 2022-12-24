@@ -14,6 +14,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @SpringBootApplication
 public class OnboardingApplication {
@@ -45,4 +48,16 @@ public class OnboardingApplication {
 //			adminService.saveAuthorizationLevel(new AuthorizationLevel(null, "ROLE_ADMIN"));
 		};
 	}
+
+//	//TODO SUS CODE HERE
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer() {
+//		return new WebMvcConfigurerAdapter() {
+//			@Override
+//			public void addCorsMappings(CorsRegistry registry) {
+//				registry.addMapping("/**")
+//						.allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH");
+//			}
+//		};
+//	}
 }
